@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobile-Friendly Site</title>
+<style>
+  /* Base styles */
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .section {
+    flex: 1 1 0; /* Flex item takes up equal space */
+    min-height: 200px; /* Set a minimum height */
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+  }
+
+  /* Responsive styles */
+  @media (max-width: 767px) {
+    .section {
+      flex: none; /* Reset flex to its default */
+      width: 100%;
+    }
+    .left-section, .right-section {
+      display: none; /* Hide sections */
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="section" style="background-color: blue;">Left Section</div>
+  <div class="section" style="background-color: red;">Middle Section</div>
+  <div class="section" style="background-color: greenyellow;">Right Section</div>
+</div>
+
+</body>
+</html>
